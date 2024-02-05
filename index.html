@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device width", initial-scale=1.0">
+    <title>MOMO</title>
+</head>
+<body>
+
+    <button id="Facebook">Share to FB</button>
+
+    <script>
+        document.getElementById("FB").addEventListener("click", shareToFB);
+
+        function shareToFB() {
+            var currentURL = window.location.href;
+            var encodedURL = encodeURIComponent(currentURL);
+            var facebookShareLink = "https://www.facebook.com/sharer/sharer.php?u=" + encodedURL;
+            window.open(facebookShareLink, "_blank");
+        }
+    </script>
+</body>
+</html>
